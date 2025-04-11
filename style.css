@@ -19,7 +19,7 @@ body {
     margin: 20px;
     padding: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     border: 2px solid #000; /* Thicker border */
     border-radius: 8px; /* Rounded edges */
     height: auto;
@@ -113,4 +113,35 @@ form button {
 
 form button:hover {
     background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Hover and click effects for the toggle-finished button */
+.toggle-finished:hover {
+    background-color: #e0e0e0; /* Light grey background on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.toggle-finished:active {
+    background-color: #a0a0a0; /* Darker grey background on click */
+}
+
+.toggle-finished.completed:hover {
+    background-color: #606060; /* Black fill for the toggle box */
+    border-color: #000; /* Black border */
+}
+
+.toggle-finished.completed:active {
+    background-color: #a0a0a0; /* Darker grey background on click */
+}
+
+/* Hover and click effects for the erase button */
+button.erase:hover {
+    background-color: #924141; /* Bright red background on hover */
+    border-color: #924141; /* Bright red border on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+button.erase:active {
+    background-color: #cc0000; /* Darker red background on click */
+    border-color: #990000; /* Darker red border on click */
 }

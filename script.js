@@ -62,23 +62,10 @@ function createToggleFinished(taskElem) {
       return;
     }
 
-    handleTaskAnimation(taskElem, () => {
-      toggleTaskCompletion(taskElem, toggleFinished);
-    });
+    toggleTaskCompletion(taskElem, toggleFinished);
   });
 
   return toggleFinished;
-}
-
-// Handle the animation for toggling tasks
-function handleTaskAnimation(taskElem, callback) {
-  taskElem.classList.add("moving");
-
-  // Wait for the animation to complete before executing the callback
-  setTimeout(() => {
-    callback();
-    taskElem.classList.remove("moving");
-  }, 300); // Match the duration of the CSS transition (0.3s)
 }
 
 // Toggle the completion state of a task
